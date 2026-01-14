@@ -1,6 +1,267 @@
 /******* Change Box Model ***************/
-*,
-*:before,
-*:after {
-  box-sizing: border-box;
+
+:root {
+    --primary-color: #592941;
+    --secondary-color: #498467;
+    --accent1-color: #52B788;
+    --accent2-color: #B2D3A8;
+    --accent3-color: #EDE5A6;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+#wrapper {
+  padding: 0.5rem;
+  background-color: white;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 4rem;
+}
+
+header a {
+  text-decoration: none;
+  color: var(--primary-color);
+}
+
+.siteName {
+  font-size: 2rem;
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+}
+
+#tools {
+  font-family: "Roboto", sans-serif;
+}
+
+nav ul {
+  height: 2rem;
+  background-color: var(--primary-color);
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 0 0.5rem;
+}
+
+nav li {
+  list-style: none;
+  margin: auto;
+}
+
+nav a {
+  text-decoration: none;
+  color: white;
+  font-family: "Lato", sans-serif;
+}
+
+h1 {
+  font-family: "Roboto", sans-serif;
+  margin: 1rem 0;
+  font-size: 1.2rem;
+  color: var(--primary-color);
+}
+
+.car {
+  background-image: url("/images/vehicles/delorean-tn.jpg");
+  object-fit: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.car-name {
+  background-color: rgba(255, 255, 255, 0.6);
+  max-width: 130px;
+}
+
+.car-name img {
+  width: 100px;
+}
+
+h2 {
+  font-family: "Roboto", sans-serif;
+  font-size: 1.1rem;
+  display: flex;
+}
+
+.car-name h2, .car-name p {
+  color: var(--accent1-color);
+}
+
+p {
+  font-family: "Lato", sans-serif;
+}
+
+.car-info {
+  display: grid;
+  margin-top: 2rem;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(2, auto);
+  grid-template-areas: 
+    "car-reviews"
+    "car-upgrades";
+}
+
+.car-reviews { grid-area: car-reviews; }
+.car-upgrades { grid-area: car-upgrades; }
+
+.car-info h2 {
+  color: var(--primary-color);
+  font-size: 1.5rem;
+}
+
+.car-upgrades {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(3, auto);
+  grid-template-areas:
+    "upgrades-title upgrades-title" 
+    "flux           flame"
+    "bumper         hub";
+  gap: 0.5rem;
+  margin-top: 2rem;
+}
+
+.upgrades-title { grid-area: upgrades-title; }
+.flux { grid-area: flux; }
+.flame {grid-area: flame; }
+.bumper { grid-area: bumper; }
+.hub { grid-area: hub; }
+
+ul {
+  padding-left: 1rem;
+}
+
+li {
+  margin-bottom: 0.8rem;
+  font-family: "Lato", sans-serif;
+}
+
+figure {
+  text-align: center;
+  background-color: var(--accent1-color);
+  height: 90px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: solid 2px var(--secondary-color);
+}
+
+footer {
+  margin-top: 2rem;
+}
+
+footer p {
+  font-size: 1rem;
+}
+
+.car-upgrades a {
+  font-family: "Montserrat", sans-serif;
+}
+
+.link {
+  text-align: center;
+}
+
+.flux, .flame {
+  margin-bottom: 1.5rem;
+}
+
+.car-reviews h2 {
+    margin-bottom: 1rem;
+  }
+
+@media screen and (min-width: 480px) {
+
+  body {
+    background-image: url("/images/site/small_check.jpg");
+    object-fit: fill;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 0 1rem;
+  }
+
+  #wrapper {
+    margin: 1rem auto;
+    max-width: 800px;
+    border: solid 3px var(--accent2-color);
+    border-radius: 5px;
+    padding: 0.5rem;
+    background-color: white;
+  }
+
+  #tools a:hover{
+    text-decoration: underline;
+  }
+
+  nav ul {
+    justify-content: space-between;
+    padding: 0 5rem;
+  }
+
+  nav a:hover {
+    text-decoration: underline;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  h2 {
+    font-size: 1.8rem;
+  }
+
+  p {
+    font-size: 1.2rem;
+  }
+
+  .car {
+    background-image: url("/images/vehicles/delorean.jpg");
+    height: 300px;
+  }
+
+  .car-name {
+    max-width: 220px;
+    margin-left: 2rem;
+  }
+
+  .car-name img {
+    width: 200px;
+    margin-top: 2rem;
+  }
+
+  .car-info {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto;
+    grid-template-areas: 
+      "car-upgrades car-reviews";
+    gap: 1.5rem;
+  }
+
+  .car-info h2 {
+    margin-bottom: 1rem;
+  }
+
+  .car-upgrades { grid-area: car-upgrades; }
+  .car-reviews { grid-area: car-reviews; }
+
+  .car-upgrades {
+    margin-top: 0;
+  }
+
+  li {
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+  }
+
+  footer {
+    margin-top: 4rem;
+  }
+
 }
