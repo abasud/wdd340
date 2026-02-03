@@ -279,6 +279,87 @@ footer p {
   font-family: "Roboto", sans-serif;
 }
 
+.mgmt-links {
+  display: flex;
+  flex-direction: column;
+}
+
+.mgmt-links a {
+  font-family: "Roboto", sans-serif;
+  margin-left: 1rem;
+  color: var(--secondary-color);
+}
+
+#mgmt-2nd {
+  margin-top: 1rem;
+}
+
+.classification-form, .inventory-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.classification-form label {
+  font-family: "Roboto", sans-serif;
+  margin: 1rem auto;
+}
+
+.classification-form input {
+  height: 44px;
+  padding-left: 0.2rem;
+  width: 100%;
+  margin-left: 1rem;
+}
+
+.classification-form button, .inventory-form button {
+  height: 44px;
+  width: 100%;
+  max-width: 300px;
+  background-color: var(--accent1-color);
+  color: white;
+  font-size: 1rem;
+  margin: 1rem auto;
+}
+
+.inventory-form {
+  background-color: var(--accent3-color);
+  width: 100%;
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+.inventory-form label {
+  font-family: "Roboto", sans-serif;
+  margin: 0.5rem auto;
+  width: 100%;
+  max-width: 300px;
+}
+
+.inventory-form input {
+  height: 44px;
+  margin: 0 auto;
+  width: 100%;
+  padding-left: 0.2rem;
+}
+
+.inventory-form textarea, .inventory-form select {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 300px;
+}
+
+.inventory-form textarea {
+  font-family: "Roboto", sans-serif;
+  height: 100px;
+  padding-left: 0.2rem;
+  padding-top: 0.2rem;
+}
+
+.inventory-form select {
+  height: 44px;
+}
+
 @media screen and (min-width: 480px) {
 
   body {
@@ -403,4 +484,19 @@ footer p {
     font-size: 1.2rem;
   }
 
+  .classification-form input, .inventory-form input {
+    width: 300px;
+  }
+
+  .classification-form button, .inventory-form button {
+    width: 100%;
+    max-width: 200px;
+    margin: 1rem auto;
+  }
+
+  .classification-form button:hover, .inventory-form button:hover {
+    cursor: pointer;
+    color: var(--primary-color);
+    background-color: var(--accent2-color);
+  }
 }
