@@ -9,7 +9,7 @@ router.get("/registration", utilities.handleErrors(accounts.buildRegister))
 
 // Process the registration data
 router.post(
-    '/register',
+    "/register",
     regValidate.registrationRules(),
     regValidate.checkRegData, 
     utilities.handleErrors(accounts.registerAccount)
@@ -20,9 +20,9 @@ router.post(
   "/login",
   regValidate.loginRules(),
   regValidate.checkLoginData,
-  (req, res) => {
-    res.status(200).send('login process')
-  },
+  utilities.handleErrors(accounts.accountLogin)
 )
+
+router.get("/accountManagement", utilities.checkLogin, utilities.handleErrors(accounts.buildAccountManagement))
 
 module.exports = router;

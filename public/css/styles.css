@@ -360,6 +360,49 @@ footer p {
   height: 44px;
 }
 
+.inventory-form #classificationList {
+  background-color: silver;
+}
+
+.acc-mgmt h2 {
+  color: var(--accent1-color);
+  font-family: "Roboto", sans-serif;
+}
+
+.mgmt-table h2 {
+  color: var(--primary-color);
+  margin-top: 2rem;
+}
+
+#classificationList {
+  margin-top: 1rem;
+  height: 44px;
+  background-color: var(--accent3-color);
+}
+
+#inventoryDisplay {
+  margin: 2rem auto 0 auto;
+  border: solid 1px var(--secondary-color);
+  max-width: 400px;
+}
+
+#inventoryDisplay th, #inventoryDisplay td {
+  font-family: "Lato", sans-serif;
+  border: solid 1px var(--secondary-color);
+}
+
+#inventoryDisplay td {
+  padding: 0.5rem 1rem 0.5rem 0.5rem;
+}
+
+#inventoryDisplay th {
+  padding: 0.5rem 0;
+}
+
+.notice {
+  margin-top: 1rem;
+}
+
 @media screen and (min-width: 480px) {
 
   body {

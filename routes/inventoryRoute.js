@@ -21,7 +21,12 @@ router.post(
 
 router.get("/newInventory", utilities.handleErrors(inventoryItem.buildInventoryItem))
 router.post(
-    "/add-inventory", utilities.handleErrors(inventoryItem.regInventoryItem)
+  "/add-inventory",
+  regValidate.addInventoryRules(),
+  regValidate.checkInventoryData,
+  utilities.handleErrors(inventoryItem.regInventoryItem)
 )
+
+router.get("/getInventory/:classification_id", utilities.handleErrors(invCont.getInventoryJSON))
 
 module.exports = router;
